@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to the Northeastern calculator.">
+  <title>Sign in | Husky Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="login.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <a class="brand" href="login.html" aria-label="Husky Calculator home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>Husky Calculator</span>
+    </a>
+    <p class="eyebrow">Northeastern University</p>
+    <h1>Welcome back</h1>
+    <p class="muted">Sign in with your Northeastern email to continue.</p>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="username" placeholder="name@northeastern.edu" aria-describedby="email-error">
+        <span class="field-error" id="email-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-describedby="password-error">
+        <span class="field-error" id="password-error" aria-live="polite"></span>
+      </div>
+      <label class="remember-option" for="remember-me">
+        <input id="remember-me" name="remember-me" type="checkbox">
+        <span>Remember me on this device</span>
+      </label>
+      <button class="button button-primary button-full" id="login-button" type="submit" disabled>Sign in</button>
+      <p class="form-error" id="login-error" role="alert" aria-live="polite"></p>
+      <p class="form-success" id="login-success" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="login-footnote">For this assignment demo, use one of the accounts listed in the Part A README.</p>
+  </main>
+</body>
+</html>

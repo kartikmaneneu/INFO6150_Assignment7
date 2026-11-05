@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple calculator for signed and decimal numbers.">
+  <title>Calculator | Husky Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <a class="brand" href="calculator.html">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>Husky Calculator</span>
+    </a>
+    <div class="user-menu">
+      <span id="welcome-message">Welcome!</span>
+      <button class="button button-quiet" id="logout-button" type="button">Log out</button>
+    </div>
+  </header>
+
+  <main class="calculator-shell">
+    <section class="calculator-card" aria-labelledby="calculator-title">
+      <p class="eyebrow">Quick calculations</p>
+      <h1 id="calculator-title">Calculator</h1>
+      <p class="muted">Enter two numbers and choose an operation.</p>
+
+      <div class="field">
+        <label for="number-1">Number 1</label>
+        <input id="number-1" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. -12.5" aria-describedby="number-1-error">
+        <span class="field-error" id="number-1-error" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="number-2">Number 2</label>
+        <input id="number-2" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 4" aria-describedby="number-2-error">
+        <span class="field-error" id="number-2-error" aria-live="polite"></span>
+      </div>
+
+      <div class="operation-grid" aria-label="Calculator operations">
+        <button class="button operation-button" type="button" data-operation="add" aria-label="Add">Add <span aria-hidden="true">+</span></button>
+        <button class="button operation-button" type="button" data-operation="subtract" aria-label="Subtract">Subtract <span aria-hidden="true">−</span></button>
+        <button class="button operation-button" type="button" data-operation="multiply" aria-label="Multiply">Multiply <span aria-hidden="true">×</span></button>
+        <button class="button operation-button" type="button" data-operation="divide" aria-label="Divide">Divide <span aria-hidden="true">÷</span></button>
+      </div>
+
+      <div class="field result-field">
+        <label for="result">Result</label>
+        <input id="result" type="text" readonly aria-live="polite" placeholder="Your result will appear here">
+      </div>
+      <p class="form-error" id="calculation-error" role="alert" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="site-footer">Built for INFO 6150 Assignment 7</footer>
+</body>
+</html>
